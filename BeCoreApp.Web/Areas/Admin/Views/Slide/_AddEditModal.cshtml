@@ -1,0 +1,63 @@
+﻿<div id="modal-add-edit" class="modal fade" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title badge badge-secondary-light" id="exampleModalLabel">
+                    Thêm & cập nhật slide
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMaintainance">
+
+                    <div class="form-group m-form__group">
+                        <input type="hidden" id="hidId" value="0" />
+                        <label for="txtName" class="form-control-label"> Tên</label>
+                        <input type="text" id="txtName" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtImage" class="form-control-label"> Ảnh bìa</label>
+                        <div class="input-group">
+                            <input type="text" id="txtImage" class="form-control m-input m-input--air" />
+                            <input type="file" id="fileInputImage" style="display:none" />
+                            <span class="input-group-btn">
+                                <input type="button" id="btnSelectImg" class="btn btn-default" value="Browser" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtUrl" class="form-control-label"> Url</label>
+                        <input type="text" id="txtUrl" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtDescription" class="form-control-label"> Tóm tắt</label>
+                        <textarea id="txtDescription" rows="10" class="form-control m-input m-input--air"></textarea>
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="ckStatus">
+                            <span class="custom-control-label">Trạng thái</span>
+                        </label>
+
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="ckHot">
+                            <span class="custom-control-label">Bài viết hot</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button type="button" id="btnSave" class="btn btn-success">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>

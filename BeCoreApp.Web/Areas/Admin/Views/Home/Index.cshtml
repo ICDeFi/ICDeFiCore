@@ -1,0 +1,84 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Overview";
+}
+@section Scripts{
+    <script src="~/admin-app/controllers/home/index.js"></script>
+    <script>
+        var homeObj = new HomeController();
+        homeObj.initialize();
+    </script>
+}
+
+@section Styles{
+    <style>
+        .card-title {
+            width: 100%;
+            text-align: center;
+        }
+
+        div#demo {
+            font-size: 43px;
+            font-weight: 800;
+            font-family: 'Coda Caption', sans-serif !important;
+            box-shadow: 0px 0px 35px #dcdcdc;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: linear-gradient( 45deg, #ff0057, #3ac3d359);
+            box-shadow: -10px 10px 13px #ad1457;
+        }
+
+            div#demo > .down-time {
+                color: #ffffff;
+                position: relative;
+                margin-right: 8px;
+            }
+
+        span.down-time-unit {
+            position: absolute;
+            top: -5px;
+            padding-left: 3px;
+            color: black;
+        }
+
+        #NotifySale {
+            font-weight: 900;
+            color: #09d0ea;
+            text-align: left;
+            font-size: 24px;
+        }
+    </style>
+}
+
+<div class="app-content icon-content">
+    <div class="section">
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="ti-package mr-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        @if (Model.Notify != null)
+                        {
+                            <h2 class="mb-5 mt-5 font-weight-bold text-center text-green">@Model.Notify.Name</h2>
+                            <div class="mt-7">
+                                @Html.Raw(Model.Notify.MildContent)
+                            </div>
+                        }
+                        else
+                        {
+                            <h2 class="mb-5 mt-5 font-weight-bold text-center text-green" style="text-shadow: -3px 1px 2px #fe2c55;">Updating</h2>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

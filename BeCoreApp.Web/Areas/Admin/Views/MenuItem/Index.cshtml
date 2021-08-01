@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Menu Item";
+}
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://rawgit.com/adamjimenez/jstree-table/master/jstreetable.js"></script>
+    <script src="~/lib/jQuery-EasyUI/jquery.easyui.min.js"></script>
+    <script src="~/admin-app/controllers/menu-item/index.js" asp-append-version="true"></script>
+    <script>
+        var menuItemObj = new MenuItemController();
+        menuItemObj.initialize('@ViewBag.MenuGroupId');
+    </script>
+}
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link href="~/lib/jQuery-EasyUI/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <link href="~/lib/jQuery-EasyUI/themes/icon.css" rel="stylesheet" />
+    <link href="~/admin-app/controllers/menu-item/index.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="app-content icon-content">
+    <div class="section">
+        <!-- Page-header opened -->
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="ti-package mr-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+            </ol>
+            <div class="mt-3 mt-lg-0">
+                @*<div class="d-flex align-items-center flex-wrap text-nowrap">
+                    <button type="button" class="btn btn-success btn-icon-text mr-2 mb-2 mb-md-0"><i class="fe fe-download"></i>Import</button>
+                    <button type="button" class="btn btn-secondary btn-icon-text mr-2 mb-2 mb-md-0"><i class="fe fe-printer"></i>Print</button>
+                    <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0"><i class="fe fe-download-cloud "></i>Download</button>
+                </div>*@
+            </div>
+        </div>
+        <!-- Page-header closed -->
+        <!-- row opened -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Menu Item list</div>
+                        <div class="card-options">
+                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                            <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                            <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive product-datatable">
+                            <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-8">
+
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="dataTables_component">
+                                            <a href="/admin/menugroup/index" class="btn btn-sm btn-indigo"><i class="fa fa-apple"></i><span> Menu Group</span></a>
+                                            <button id="btnCreate" type="button" class="btn btn-sm btn-success " data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus"></i> Create</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12" style="margin-top:15px;">
+                                        <div id="jstree"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_AddEditModal")

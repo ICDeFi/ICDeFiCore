@@ -1,0 +1,56 @@
+﻿@model BeCoreApp.Application.ViewModels.Common.FeedbackViewModel
+@{
+    Layout = null;
+}
+<style>
+    table {
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+        width: 20%;
+        border: 1px solid #cfcecf;
+        padding: 10px;
+    }
+
+    td {
+        text-align: left;
+        border: 1px solid #cfcecf;
+        padding: 10px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div style="padding: 30px 20px 30px 20px;">
+        <div style="display:block">
+            <div style="text-align:center;">
+                <h3 style="font-size: 35px;color: #54920d;">Contact From Client</h3>
+                <table>
+                    <tr>
+                        <th>FullName:</th>
+                        <td>@Model.FullName</td>
+                    </tr>
+                    <tr>
+                        <th>Phone:</th>
+                        <td>@Model.Phone</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th>Title:</th>
+                        <td>@Model.Title</td>
+                    </tr>
+                    <tr>
+                        <th>Message:</th>
+                        <td>@Model.Message</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

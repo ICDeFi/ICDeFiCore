@@ -1,0 +1,19 @@
+﻿.select2-container {
+    width: 100% !important;
+}
+
+.cke_contents.cke_reset {
+    height: 330px !important;
+}
+
+/*#image-list, #library-list {
+    text-align: center;
+}
+
+.btn-delete-image, .btn-delete-library {
+    margin-left: 10px;
+}
+
+#library-list div img {
+    padding-bottom: 5px;
+}*/

@@ -1,0 +1,95 @@
+﻿<div id="modal-add-edit" class="modal fade" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title badge badge-secondary-light" id="exampleModalLabel">
+                    Thêm & cập nhật danh mục
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMaintainance">
+                    <input type="hidden" id="hideId" />
+                    <input type="hidden" id="txtSortOrder" />
+
+                    <div class="form-group">
+                        <label for="txtName" class="form-control-label">Tên</label>
+                        <input type="text" name="txtName" class="form-control m-input m-input--air" id="txtName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtDescription" class="form-control-label">Chú Thích</label>
+                        <textarea id="txtDescription" rows="20" class="form-control m-input m-input--air"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtName" class="form-control-label">Hình Thức</label>
+                        <div class="m-select2 m-select2--air">
+                            @Html.DropDownList("Type", null, "", new { @class = "form-control m-select2" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ddlFunctionId" class="form-control-label">Chức Năng</label>
+                        <input id="ddlFunctionId" class="form-control" name="ddlFunctionId" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtParentName" class="form-control-label">Parent Name</label>
+                        <input type="text" readonly name="txtParentName" class="form-control m-input m-input--air" id="txtParentName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtParentId" class="form-control-label">Parent ID</label>
+                        <input type="text" readonly name="txtParentId" class="form-control m-input m-input--air" id="txtParentId">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtIconCss" class="form-control-label">Icon Css</label>
+                        <input type="text" name="txtIconCss" class="form-control m-input m-input--air" id="txtIconCss">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtUrl" class="form-control-label">Url</label>
+                        <input type="text" readonly name="txtUrl" class="form-control m-input m-input--air" id="txtUrl">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtSeoPageTitle" class="form-control-label">Seo Page Title</label>
+                        <input type="text" name="txtSeoPageTitle" class="form-control m-input m-input--air" id="txtSeoPageTitle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtSeoKeywords" class="form-control-label">Seo Keywords</label>
+                        <input type="text" name="txtSeoKeywords" class="form-control m-input m-input--air" id="txtSeoKeywords">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtSeoDescription" class="form-control-label">Seo Description</label>
+                        <input type="text" name="txtSeoDescription" class="form-control m-input m-input--air" id="txtSeoDescription">
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="ckIsMain">
+                            <span class="custom-control-label">Danh mục chính</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="ckStatus">
+                            <span class="custom-control-label">Trạng thái</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button type="button" id="btnSave" class="btn btn-success">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+﻿microsoft.entityFrameworkcore.sqlserver
+microsoft.entityFrameworkcore
+microsoft.entityFrameworkcore.tools
+microsoft.extensions.configuration
+Microsoft.AspNetCore.Identity.EntityFrameworkCore

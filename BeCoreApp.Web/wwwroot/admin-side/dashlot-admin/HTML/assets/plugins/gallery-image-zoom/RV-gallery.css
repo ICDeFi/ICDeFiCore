@@ -1,0 +1,276 @@
+.gallery1 > * {
+   box-sizing: border-box;
+}
+
+.gallery1 {
+	width: 100%;
+    max-width: 500px;
+	position: relative;
+ 	margin: auto;
+	box-sizing:border-box;
+
+}
+.gallery-row {
+	display:flex;
+	flex-direction: column;
+    flex: 1 100%;
+	height:100%;
+   
+}
+
+.g_nav-cont {
+	min-height:25%;
+	width:100%;
+	display:flex;
+    align-items: center;
+}
+
+.g_img-cont {
+    flex: 1;
+	width:100%;
+    display:flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.g_nav {
+	height: 100%;
+    width: calc(100% - 100px);
+	overflow: hidden;
+	padding: 7px 0;
+	display: flex;
+	margin-bottom:30px;
+}
+
+.arrow-div {
+	height: 100%;
+    width: 50px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	color: #d8d8d8;;
+	transition: 0.4s;
+    cursor: pointer;
+}
+
+.arrow-div > * {
+	font-size:40px;
+
+}
+
+.prev:hover {
+	transform: translate(-5px,0px);
+	color: #6963ff !important;
+}
+
+.next:hover {
+	transform: translate(5px,0);
+	color: #6963ff !important;
+}
+
+.g_s-img {
+	width: 30%;
+    height: 100%;
+    margin:1px 2% 2px 2%;
+	align-self: center;
+	display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+	position:relative;
+	left:0;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: 0.25s;
+}
+
+.g_s-img img {
+	width: 100%;
+	height:100%;
+    object-fit: contain;
+}
+
+.g_s-img:hover, .agi {
+    opacity: 1;
+}
+
+.g_s-img:hover img {
+    transform:scale(1.1);
+}
+
+.g_b-img {
+	width: 100%;
+	height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.g_b-img img {
+	width: 100%;
+	height: 100%;
+    display: flex;
+    object-fit: contain;
+    position: relative;
+}
+
+.g_b-img img.cloned {
+	position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.g_f-s {
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255,1);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.g_f-s div {
+	position:relative;
+}
+
+.g_f-s-image {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height: 100%;
+    width: calc(90% - 30px);
+}
+
+
+.g_f-s-image img {
+	width: calc(100% - 30px);
+	height: 85%;
+    object-fit: contain;
+    position: relative;
+}
+
+.g_f-s-arrow {
+	width:calc(10% + 15px);
+	height:100%;
+	display:flex;
+  	justify-content: center;
+  	align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.g_f-s .g_f-s-arrow > * {
+    color: #d8d8d8;
+    font-size:3rem;
+    transition: 0.3s;
+}
+
+
+.g_f-s-arrow:hover {
+	background-color: #a3b1c9;
+}
+
+.g_f-s .prev:hover i {
+    transform: translate(-5px,0px);
+    color: #6963ff;
+}
+
+.g_f-s .next:hover i {
+    transform: translate(5px,0px);
+    color: #6963ff;
+}
+
+.g_f-s-hidden {
+    display:none;
+    position: absolute;
+    z-index:9999;
+}
+
+.dots {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 4px;
+    transition: 0.15s;
+    box-shadow: 0px 0px 5px rgb(0,0,0);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.dot:hover, .dot-active {
+    opacity: 0.9;
+    box-shadow: 0px 0px 5px 1px rgb(0,0,0);
+}
+
+.big-arrows {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.g_img-cont .big-arrows > * {
+    height:100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    text-shadow: 0px 0px 5px rgb(0,0,0);
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.g_img-cont .big-arrows > * > * {
+    font-size: 3rem;
+}
+
+.g_img-cont .big-arrows > *:first-child:hover {
+    transform: translate(-5px,0px);
+    opacity: 0.8;
+}
+.g_img-cont .big-arrows > *:last-child:hover {
+    transform: translate(5px,0px);
+    opacity: 0.8;
+}
+
+.g_f-s .close-button {
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.g_f-s .close-button > * {
+    color: #d8d8d8;
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+.g_f-s .close-button > *:hover {
+    color: #6963ff;
+}

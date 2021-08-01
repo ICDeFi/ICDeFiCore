@@ -1,0 +1,61 @@
+﻿<div id="modal-add-edit" class="modal fade" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title badge badge-secondary-light" id="exampleModalLabel">
+                    Add and Update member
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMaintainance">
+                    <div class="form-group">
+                        <input type="hidden" id="hidId" value="" />
+                        <label for="txtFullName" class="form-control-label">Fullname</label>
+                        <input type="text" name="txtFullName" class="form-control m-input m-input--air" id="txtFullName">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtUserName" class="form-control-label">Username</label>
+                        <input type="text" name="txtUserName" class="form-control m-input m-input--air" id="txtUserName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword" class="form-control-label">Password: <span class="badge badge-primary-light">At least 6 characters - must have at least one number 0 -> 9</span></label>
+                        <input type="password" name="txtPassword" class="form-control m-input m-input--air" id="txtPassword" />
+                    </div>
+                    <div class="form-group">
+                        <label for="txtConfirmPassword" class="form-control-label">Confirm password</label>
+                        <input type="password" name="txtConfirmPassword" class="form-control m-input m-input--air" id="txtConfirmPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail" class="form-control-label">Email</label>
+                        <input type="email" name="txtEmail" class="form-control m-input m-input--air" id="txtEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPhoneNumber" class="form-control-label">Mobile phone</label>
+                        <input type="text" name="txtPhoneNumber" class="form-control m-input m-input--air" id="txtPhoneNumber">
+                    </div>
+                    <div class="form-group m-form__group">
+                        <label class="form-control-label">Role</label>
+                        <div class="m-select2 m-select2--air">
+                            @Html.DropDownList("RoleId", null, "", new { @class = "form-control m-select2" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" checked="checked" id="ckStatus">
+                            <span class="custom-control-label">Status</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" id="btnSave" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

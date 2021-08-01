@@ -1,0 +1,47 @@
+@media (min-width: 1025px){
+	.page{
+		max-width:1170px;
+		margin:0 auto;
+		background:#f6f9fc;
+		position:relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-ms-flex-pack: center;
+		justify-content: center;
+		min-height: 100%;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 0px 0px, rgba(0, 0, 0, 0.3) 0px 5px 25px 0px;
+	}
+	body{
+		background:#f6f9fc !important;
+	}
+	.hor-menu .horizontalMenu>.horizontalMenu-list>li>a{
+		padding:1rem 1rem 1rem !important;
+	}
+	.vh {
+		height: 100vh;
+	}
+	.horizontal-main {
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.app-header.header{
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.app-sidebar.toggle-sidebar{
+		z-index:10;
+	}
+	.app-sidebar.toggle-sidebar{
+		position:fixed !important;
+		left:auto !important;
+	}
+	.app-sidebar{
+		position:absolute !important;
+	}
+	.second-sidemenu{
+		left:auto !important;
+		margin-left:70px;
+	}
+}

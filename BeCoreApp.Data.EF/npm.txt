@@ -1,0 +1,8 @@
+﻿Microsoft.AspNetCore.Identity
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+microsoft.entityFrameworkcore.tools
+Microsoft.Extensions.Configuration.FileExtensions
+Microsoft.Extensions.Configuration.Json
+add-migration initial
+update-database
+Remove-Migration

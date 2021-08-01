@@ -1,0 +1,49 @@
+﻿@model BeCoreApp.Utilities.Dtos.PagedResultBase
+@{
+    var urlTemplate = Url.Action() + "?page={0}";
+    var request = ViewContext.HttpContext.Request;
+    foreach (var key in request.Query.Keys)
+    {
+        if (key == "page")
+        {
+            continue;
+        }
+
+        urlTemplate += "&" + key + "=" + request.Query[key];
+    }
+
+    var startIndex = Math.Max(Model.CurrentPage - 5, 1);
+    var finishIndex = Math.Min(Model.CurrentPage + 5, Model.PageCount);
+}
+<!--start Pagination-->
+@if (Model.PageCount > 1)
+{
+    <ul class="pagination mb-xl-0">
+        @if (Model.CurrentPage != startIndex)
+        {
+            <li class="page-item page-prev">
+                <a class="page-link" href="@urlTemplate.Replace("{0}", "1")">←</a>
+            </li>
+        }
+
+        @for (var i = startIndex; i <= finishIndex; i++)
+        {
+            if (i == Model.CurrentPage)
+            {
+                <li class="page-item active"><a class="page-link" href="#">@i</a></li>
+            }
+            else
+            {
+                <li class="page-item"><a class="page-link" href="@urlTemplate.Replace("{0}", i.ToString())">@i</a></li>
+            }
+        }
+
+        @if (Model.CurrentPage != finishIndex)
+        {
+            <li class="page-item page-next">
+                <a class="page-link" href="@urlTemplate.Replace("{0}", Model.PageCount.ToString())">→</a>
+            </li>
+        }
+    </ul>
+}
+<!--end Pagination-->

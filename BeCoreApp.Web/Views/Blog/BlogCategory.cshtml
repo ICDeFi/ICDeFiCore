@@ -1,0 +1,84 @@
+﻿@model BeCoreApp.Models.BlogViewModels.CatalogViewModel
+@{
+    Layout = "_LayoutBlog";
+    //ViewData["Title"] = Model.Data.CurrentPage == 1 ? Model.BlogCategory.Name : Model.BlogCategory.Name + " - Page " + Model.Data.CurrentPage;
+    //ViewData["MetaKeyword"] = Model.Data.CurrentPage == 1 ? Model.BlogCategory.SeoKeywords : Model.BlogCategory.SeoKeywords + " - Page " + Model.Data.CurrentPage;
+    //ViewData["MetaDescription"] = Model.Data.CurrentPage == 1 ? Model.BlogCategory.SeoDescription : Model.BlogCategory.SeoDescription + " - Page " + Model.Data.CurrentPage;
+}
+@section Styles{
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        .news {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+
+        a.new {
+            background-color: #151414;
+            display: block;
+            color: #51475a;
+            margin: 20px 0 35px;
+        }
+        .news-carousel__item-body {
+            padding: 20px 20px 20px 20px;
+        }
+
+        .news-carousel__item-body > p {
+            line-height: 30px;
+            margin-bottom: 20px;
+            color: #aab2cd;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            height: 90px;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+}
+@section Scripts{
+
+}
+
+<section class="news">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section-header section-header--animated section-header--center section-header--medium-margin">
+                    <h2>New events</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row news__list">
+            @foreach (var item in Model.Data.Results)
+            {
+                var url = $"{item.SeoAlias}-b.{item.Id}.html";
+                <div class="col-lg-4 col-md-6 col-12">
+                    <a href="@url" class="news-carousel__item">
+                        <div class="news-carousel__item-body">
+                            <img src="@item.Image" />
+
+                            <h3 class="news-carousel__item-title">
+                                @item.Name
+                            </h3>
+                            <p>
+                                @item.Description
+                            </p>
+                            <div class="news-carousel__item-data">
+                                @item.DateModified.ToString("MM-dd-yyyy")
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+            @*<div class="center-block text-center mb-5 mt-5">
+                @await Component.InvokeAsync("Pager", Model.Data)
+            </div>*@
+        </div>
+    </div>
+</section>

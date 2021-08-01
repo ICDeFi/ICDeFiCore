@@ -1,0 +1,21 @@
+﻿@model WalletViewModel
+<div class="form-group">
+    <label class="form-control-label">Wallet TRX Balance</label>
+    <input type="text" readonly class="form-control numberFormat"
+           value="@Model.WalletTRX.ToString().Replace(',', '.')">
+</div>
+
+<div class="form-group">
+    <label class="form-control-label"> TRX Amount</label>
+    <input type="text" class="form-control numberFormat txtTRXAmount" value="0" id="txtAmount">
+</div>
+
+<div class="form-group">
+    <label class="form-control-label">TikTok (TT) Receiving Amount</label>
+    <input type="text" readonly class="form-control numberFormat" value="0" id="txtTTReceiving">
+</div>
+
+<button class="btn btn-dark btn-block mt-4" type="button"
+        id="btnBuy">
+    Buy Now
+</button>

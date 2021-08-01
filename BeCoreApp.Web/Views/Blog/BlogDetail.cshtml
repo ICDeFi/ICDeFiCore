@@ -1,0 +1,39 @@
+﻿@model BeCoreApp.Models.BlogViewModels.DetailViewModel
+@{
+    Layout = "_LayoutBlog";
+    ViewData["Title"] = Model.Blog.SeoPageTitle;
+    ViewData["MetaKeyword"] = Model.Blog.SeoKeywords;
+    ViewData["MetaDescription"] = Model.Blog.SeoDescription;
+}
+@section Styles{
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        .news {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+    </style>
+}
+@section Scripts{
+}
+
+<section class="news">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section-header section-header--center section-header--small-margin">
+                    <h3 style="color:red;font-family:Roboto">@Model.Blog.DateModified.ToString("dd-MM-yyyy")</h3>
+                    <h2>@Model.Blog.Name</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                @Html.Raw(Model.Blog.MildContent)
+            </div>
+        </div>
+    </div>
+</section>

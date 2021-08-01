@@ -1,0 +1,10 @@
+﻿Automapper
+AutoMapper.Extensions.Microsoft.DependencyInjection
+Serilog.Extensions.Logging.File
+EPPlus.Core
+PaulMiami.AspNetCore.Mvc.Recaptcha
+Microsoft.AspNetCore.Session
+SkiaSharp
+Microsoft.Extensions.Caching.Memory
+WebMarkupMin.AspNetCore2
+WebMarkupMin.NUglify

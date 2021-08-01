@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-sm-5">
+        <div class="m-datatable__pager-info" id="datatable-checkbox_info" role="status" aria-live="polite">
+            <div class="row">
+                <div class="col-sm-3">
+                    <select id="ddl-show-page" class="form-control m-input m-input--air">
+                        <option selected="selected" value="150">150</option>
+                        <option value="300">300</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </div>
+                <div class="col-sm-9" style="line-height:2.5">
+                    <span class="item-per-page">
+                        records/page.
+                    </span>
+                    Total record: <strong id="lbl-total-records"></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7">
+        <div class="m-datatable__pager m-datatable--paging-loaded" id="datatable-checkbox_paginate">
+            <ul class="m-datatable__pager-nav" id="paginationUL"></ul>
+        </div>
+    </div>
+</div>

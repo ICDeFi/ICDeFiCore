@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+    <title>IC DEFI</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="~/client-side/icd/img/ICDLogo1.png">
+    <!-- Template Basic Images End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <link rel="stylesheet" href="~/client-side/icd/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/client-side/icd/css/main.min.css">
+
+    <link href="/admin-side/dashlot-admin/HTML/assets/plugins/sweet-alert/sweetalert.css" rel="stylesheet">
+    <link href="/admin-side/dashlot-admin/HTML/assets/plugins/notify/css/jquery.growl.css" rel="stylesheet">
+
+    <!-- Load google font
+    ================================================== -->
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: ['Catamaran:300,400,600,700', 'Raleway:100,700', 'Roboto:700,900'] }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = '/client-side/icd/js/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    @*<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500;1,900&display=swap" rel="stylesheet">*@
+
+    <!-- Load other scripts
+    ================================================== -->
+    <script type="text/javascript">
+        var _html = document.documentElement;
+        _html.className = _html.className.replace("no-js", "js");
+    </script>
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+
+    <div class="preloader" id="preloader"></div>
+
+    <div class="wrapper">
+        @await Html.PartialAsync("_Header")
+
+        @RenderBody()
+
+        @await Html.PartialAsync("_Footer")
+    </div>
+
+    <script src="~/client-side/icd/js/jquery.min.js"></script>
+    <script src="~/client-side/icd/js/jquery-2.2.4.min.js"></script>
+    <script src="~/client-side/icd/js/scripts.min.js"></script>
+
+    <!-- Notifications js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/sweet-alert/sweetalert.min.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/notify/js/rainbow.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/notify/js/jquery.growl.js"></script>
+    
+    <script src="~/client-app/shared/be.js"></script>
+    
+    <script src="~/client-app/controllers/feedback/index.js"></script>
+    <script>
+        var feedbackObj = new FeedbackController;
+        feedbackObj.initialize()
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

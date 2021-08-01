@@ -1,0 +1,35 @@
+﻿<div id="modal-add" class="modal fade" tabindex="-1" data-backdrop="static"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title badge badge-secondary-light" id="exampleModalLabel">
+                    Support
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMaintainance">
+
+                    <div class="form-group">
+                        <input type="hidden" id="hidId" value="0" />
+                        <label for="txtName" class="form-control-label"> Title</label>
+                        <input type="text" id="txtName" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtContent" class="form-control-label"> Content</label>
+                        <textarea id="txtRequestContent" rows="10" class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" id="btnSave" class="btn btn-success">Send</button>
+            </div>
+        </div>
+    </div>
+</div>

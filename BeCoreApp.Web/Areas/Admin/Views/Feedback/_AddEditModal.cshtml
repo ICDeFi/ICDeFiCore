@@ -1,0 +1,49 @@
+﻿<div id="modal-add-edit" class="modal fade" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title badge badge-secondary-light" id="exampleModalLabel">
+                    Chi tiết yêu cầu
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmMaintainance">
+
+                    <div class="form-group m-form__group">
+                        <label for="txtTitle" class="form-control-label"> Tiêu Đề</label>
+                        <input type="text" readonly id="txtTitle" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtFullName" class="form-control-label"> Họ Tên</label>
+                        <input type="text" readonly id="txtFullName" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtPhone" class="form-control-label"> Phone</label>
+                        <input type="text" readonly id="txtPhone" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtEmail" class="form-control-label"> Email</label>
+                        <input type="text" readonly id="txtEmail" class="form-control m-input m-input--air">
+                    </div>
+
+                    <div class="form-group m-form__group">
+                        <label for="txtMessage" class="form-control-label"> Nội Dung</label>
+                        <textarea id="txtMessage" readonly rows="10" class="form-control m-input m-input--air"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>

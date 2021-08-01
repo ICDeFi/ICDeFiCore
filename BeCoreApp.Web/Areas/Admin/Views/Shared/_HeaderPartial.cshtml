@@ -1,0 +1,52 @@
+﻿@using BeCoreApp.Extensions
+
+<div class="header-main header sticky">
+    <div class="app-header header top-header navbar-collapse ">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="header-brand" href="/Admin/Home/Index">
+                    <img src="~/client-side/icd/img/ICDlogo3.png" class="header-brand-img desktop-logo">
+                    <img src="~/client-side/icd/img/ICDlogo3.png" class="header-brand-img desktop-logo-1">
+                    <img src="~/client-side/icd/img/ICDlogo3.png" class="mobile-logo">
+                    <img src="~/client-side/icd/img/ICDlogo3.png" class="mobile-logo-1">
+                </a>
+                <a href="#" data-toggle="sidebar" class="nav-link icon toggle"><i class="fe fe-align-justify fs-20"></i></a>
+                <div class="d-flex header-left left-header">
+                    <div class="d-none d-lg-block horizontal">
+
+                    </div>
+                </div>
+                <div class="d-flex header-right ml-auto">
+                    <div class="dropdown drop-profile mr-2">
+                        <a class="nav-link pr-0 leading-none" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <div class="profile-details mt-3">
+                                <span class="mr-3 mb-0  fs-15 font-weight-semibold text-green">@User.GetSpecificClaim("UserName")</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow animated bounceInDown w-250">
+                            <div class="user-profile bg-header-image border-bottom p-3">
+                                <div class="user-details text-center">
+                                    <h4 class="mb-0">@User.GetSpecificClaim("UserName")</h4>
+                                    <p class="mb-1 fs-13">@User.GetSpecificClaim("Email")</p>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="/admin/wallet/index">
+                                <i class="dropdown-icon ti-wallet"></i> Wallet
+                            </a>
+                            <a class="dropdown-item" href="/admin/network/index">
+                                <i class="dropdown-icon fa fa-users "></i> Affiliate
+                            </a>
+                            <a class="dropdown-item" href="/admin/transaction/index">
+                                <i class="dropdown-icon ion-arrow-swap"></i> History
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item mb-1" href="/Admin/Account/Logout">
+                                <i class="dropdown-icon mdi  mdi-logout-variant"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

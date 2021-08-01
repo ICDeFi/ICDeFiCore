@@ -1,0 +1,220 @@
+﻿@using BeCoreApp.Extensions;
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="IC DEFI" name="description">
+    <meta content="IC DEFI" name="author">
+    <meta name="keywords" content="IC DEFI">
+
+    <link rel="icon" href="~/client-side/icd/img/ICDLogo1.png">
+
+    <!-- Title -->
+    <title>IC DEFI</title>
+
+    <!-- Bootstrap css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/bootstrap-4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Style css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/css/style.css" rel="stylesheet" />
+    <link href="~/admin-side/dashlot-admin/HTML/assets/css/dark-boxed.css" rel="stylesheet" />
+
+    <!-- Default css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/css/default.css" rel="stylesheet">
+
+    <!-- Sidemenu css-->
+    <link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/plugins/sidemenu/closed-sidemenu.css">
+
+    <!-- Bootstrap-daterangepicker css -->
+    <link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/plugins/bootstrap-daterangepicker/daterangepicker.css">
+
+    <!-- Bootstrap-datepicker css -->
+    <link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+
+    <!-- Custom scroll bar css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu-repsonsive-tabs  css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css" rel="stylesheet">
+
+    <!-- Data table css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/datatable/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <!-- P-scroll css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/p-scroll/p-scroll.css" rel="stylesheet" type="text/css">
+
+    <!-- Nice-select css  -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet" />
+
+    <!-- Button Loader css -->
+    @*<link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/css/buttons.css">*@
+
+    <!-- Select2 Plugin -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/select2/select2.min.css" rel="stylesheet" />
+
+    <!-- News-Ticker css-->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/newsticker/jquery.jConveyorTicker.css" rel="stylesheet" />
+
+    <!-- Font icons css-->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Sweet-alert css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/sweet-alert/sweetalert.css" rel="stylesheet" />
+
+    <!-- Notifications css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/notify/css/jquery.growl.css" rel="stylesheet" />
+
+    <!-- Rightsidebar css -->
+    <link href="~/admin-side/dashlot-admin/HTML/assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <!-- Color-palette css-->
+    <link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/css/skins.css" />
+
+    <!-- Style-admin css-->
+    <link rel="stylesheet" href="~/admin-side/dashlot-admin/HTML/assets/css/style-admin.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body class="app sidebar-mini dark-mode" @*style="background: url(/client-side/dolphin/assets/img/hero-bg-v2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;"*@>
+
+    <!-- Loader -->
+    <div id="loading">
+        <img src="~/client-side/icd/img/icdbg.png" class="loader-img" alt="Loader">
+    </div>
+
+    <!-- PAGE -->
+    <div class="page">
+        <div class="page-main">
+
+            <!-- Top-header opened -->
+            @await Html.PartialAsync("_HeaderPartial")
+            <!-- Top-header closed -->
+            <!-- Sidebar menu-->
+            @await Html.PartialAsync("_LeftSidebarPartial")
+            <!-- Sidemenu closed -->
+            <!-- App-content opened -->
+            @RenderBody()
+            <!-- App-content closed -->
+        </div>
+
+        <!-- Right-sidebar-->
+        @*@await Html.PartialAsync("_RightSidebarPartial")*@
+        <!-- Right-sidebar-closed -->
+        <!-- Footer opened -->
+        @await Html.PartialAsync("_FooterPartial")
+        <!-- Footer closed -->
+        @*<script lang="javascript">var __vnp = { code: 1496, key: '', secret: '35ed3afccd2977a017f632c71d43e53a' }; (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.defer = true; ga.src = '//core.vchat.vn/code/tracking.js'; var s = document.getElementsByTagName('script'); s[0].parentNode.insertBefore(ga, s[0]); })();</script>*@
+    </div>
+
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- Jquery-scripts -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/vendors/jquery-3.2.1.min.js"></script>
+
+    <!--mustache-->
+    <script src="~/lib/mustache/mustache.js"></script>
+
+    <!--ckeditor-->
+    <script src="~/lib/ckeditor/ckeditor.js"></script>
+
+
+    <!-- Moment js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/moment/moment.min.js"></script>
+
+    <!-- Bootstrap-scripts js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/vendors/bootstrap.bundle.min.js"></script>
+
+    <!-- Sparkline JS-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/vendors/jquery.sparkline.min.js"></script>
+
+    <!-- Bootstrap-daterangepicker js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Bootstrap-datepicker js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+    <!-- Chart-circle js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/vendors/circle-progress.min.js"></script>
+
+    <!-- Rating-star js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/rating/jquery.rating-stars.js"></script>
+
+    <!-- Custom scroll bar js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- P-scroll js -->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/plugins/p-scroll/p-scroll.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/p-scroll/p-scroll-1.js"></script>*@
+
+    <!-- Sidemenu js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/sidemenu/icon-sidemenu.js"></script>
+
+    <!-- Data tables -->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/plugins/datatable/jquery.dataTables.min.js"></script>
+        <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+        <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/datatable/datatable.js"></script>*@
+
+    <!-- Sidemenu-respoansive-tabs js -->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/plugins/sidemenu-responsive-tabs/js/sidemenu-responsive-tabs.js"></script>*@
+
+    <!-- Select2 js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/select2/select2.full.min.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/select2.js"></script>
+
+    <!-- Leftmenu js -->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/js/left-menu.js"></script>*@
+
+    <!-- Sweet-alert js  -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/sweet-alert/sweetalert.min.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/sweet-alert.js"></script>
+
+    <!--Newsticker js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/newsticker/jquery.jConveyorTicker.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/newsticker.js"></script>
+
+    <!-- Chart js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/chart/chart.min.js"></script>
+
+    <!-- Nice-select js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/jquery-nice-select/js/jquery.nice-select.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/jquery-nice-select/js/nice-select.js"></script>
+
+    <!-- Apexchart js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/apexcharts.js"></script>
+
+    <!-- Rightsidebar js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/sidebar/sidebar.js"></script>
+
+    <!-- Showmore js -->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/js/jquery.showmore.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/showmore.js"></script>*@
+
+    <!-- Notifications js -->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/notify/js/rainbow.js"></script>
+    <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/notify/js/jquery.growl.js"></script>
+
+    <!--Button Loader js-->
+    @*<script src="~/admin-side/dashlot-admin/HTML/assets/plugins/buttons/js/spin.min.js"></script>
+        <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/buttons/js/ladda.min.js"></script>
+        <script src="~/admin-side/dashlot-admin/HTML/assets/plugins/buttons/js/button.js"></script>*@
+
+
+
+    <!-- Custom js-->
+    <script src="~/admin-side/dashlot-admin/HTML/assets/js/custom.js"></script>
+
+    <!-- twbs-pagination -->
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
+
+    <script src="~/admin-app/shared/be.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

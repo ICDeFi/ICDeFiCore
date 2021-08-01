@@ -1,0 +1,23 @@
+﻿@*@using Microsoft.AspNetCore.Identity*@
+@using BeCoreApp.Extensions
+@{
+    //string classActive = "";
+    //string path = @Context.Request.Path;
+    //string url = path.Substring(7);
+    //int sbIndex = url.IndexOf("/");
+    //string controllerName = url.ToLower();
+    //if (sbIndex > 0)
+    //    controllerName = controllerName.Substring(0, sbIndex);
+}
+
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar toggle-sidebar">
+    <div class="app-sidebar__user">
+        <div class="user-info">
+            <a href="#" class="">
+                <span class="app-sidebar__user-name font-weight-semibold text-green">@User.GetSpecificClaim("UserName")</span><br>
+            </a>
+        </div>
+    </div>
+    @await Component.InvokeAsync("SideBar")
+</aside>

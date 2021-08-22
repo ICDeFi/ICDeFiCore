@@ -31,7 +31,6 @@ namespace BeCoreApp.Controllers
             _configuration = configuration;
             _viewRenderService = viewRenderService;
         }
-        [Route("lien-he.html")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -40,7 +39,6 @@ namespace BeCoreApp.Controllers
             return View(model);
         }
 
-        [Route("lien-he.html")]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> Index(ContactPageViewModel model)
